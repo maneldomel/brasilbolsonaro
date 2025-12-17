@@ -38,23 +38,25 @@ html::-webkit-scrollbar {
 
 /* Header */
 .header {
-    background: linear-gradient(135deg, #1e5799 0%, #2d8659 100%);
-    color: white;
-    padding: 60px 20px;
+    background: transparent;
+    color: #222;
+    padding: 80px 20px 60px;
     text-align: center;
 }
 
 .header-title {
-    font-size: 3rem;
+    font-size: 4.5rem;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
+    line-height: 1.2;
 }
 
 .header-subtitle {
-    font-size: 1.2rem;
-    max-width: 800px;
+    font-size: 2rem;
+    max-width: 900px;
     margin: 0 auto;
-    line-height: 1.6;
+    line-height: 1.5;
+    color: #444;
 }
 
 /* Highlight Section */
@@ -836,11 +838,11 @@ html::-webkit-scrollbar {
 /* Responsive */
 @media (max-width: 768px) {
     .header-title {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .header-subtitle {
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 
     .highlight-title {
@@ -896,7 +898,11 @@ html::-webkit-scrollbar {
 
 @media (max-width: 480px) {
     .header-title {
-        font-size: 1.5rem;
+        font-size: 2rem;
+    }
+
+    .header-subtitle {
+        font-size: 1.1rem;
     }
 
     .donation-buttons {
