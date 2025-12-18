@@ -451,28 +451,72 @@ html::-webkit-scrollbar {
     box-shadow: 0 6px 15px rgba(0,0,0,0.3);
 }
 
-.donation-info {
+.faq-section {
     max-width: 800px;
     margin: 60px auto 0;
-    background-color: rgba(255,255,255,0.1);
-    padding: 30px;
-    border-radius: 15px;
 }
 
-.info-title {
-    font-size: 1.5rem;
+.faq-item {
+    background-color: rgba(255,255,255,0.95);
+    border-radius: 12px;
     margin-bottom: 15px;
-    margin-top: 25px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
 
-.info-title:first-child {
-    margin-top: 0;
+.faq-item:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
-.info-text {
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 20px 25px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.faq-question:hover {
+    background-color: rgba(0,0,0,0.03);
+}
+
+.faq-icon {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #1e5799;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 25px;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px;
+    padding: 0 25px 20px 25px;
+}
+
+.faq-answer p {
     font-size: 1.05rem;
     line-height: 1.7;
-    margin-bottom: 15px;
+    color: #555;
+    margin: 0;
 }
 
 .supporters-list {

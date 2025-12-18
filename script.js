@@ -482,5 +482,25 @@ function startAutoIncrement() {
 // Iniciar auto-increment quando a página carregar
 startAutoIncrement();
 
+// ============================================
+// FAQ ACCORDION
+// ============================================
+document.querySelectorAll('.faq-question').forEach(button => {
+    button.addEventListener('click', () => {
+        const faqItem = button.parentElement;
+        const isActive = faqItem.classList.contains('active');
+
+        // Fechar todos os outros itens
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.classList.remove('active');
+        });
+
+        // Abrir o item clicado se não estava ativo
+        if (!isActive) {
+            faqItem.classList.add('active');
+        }
+    });
+});
+
 console.log('Site de doações carregado com sucesso!');
 console.log('LEMBRE-SE: Substitua "SUA_CHAVE_ENCRIPTADA" pela sua chave real da Duttyfy no início do arquivo script.js');
