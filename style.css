@@ -220,6 +220,12 @@ html::-webkit-scrollbar {
     transition: width 0.5s ease;
 }
 
+/* Donation Values Section */
+.donation-values-section {
+    background-color: #fff;
+    padding: 30px 20px;
+}
+
 /* Rewards Section */
 .rewards-section {
     background-color: #f0f9f4;
@@ -415,10 +421,10 @@ html::-webkit-scrollbar {
 
 .donation-buttons {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
-    max-width: 900px;
-    margin: 0 auto 50px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    max-width: 400px;
+    margin: 0 auto 30px;
 }
 
 .donation-btn {
@@ -903,6 +909,7 @@ html::-webkit-scrollbar {
 
     .donation-buttons {
         grid-template-columns: repeat(2, 1fr);
+        max-width: 350px;
     }
 
     .donation-btn {
@@ -930,6 +937,8 @@ html::-webkit-scrollbar {
     }
 
     .donation-buttons {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 300px;
+        gap: 8px;
     }
 }
