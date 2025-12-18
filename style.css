@@ -851,6 +851,35 @@ html::-webkit-scrollbar {
         font-size: 1rem;
     }
 
+    .metrics-section {
+        padding: 30px 15px;
+    }
+
+    .metrics-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .metric-card {
+        padding: 20px 15px;
+    }
+
+    .metric-icon {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .metric-label {
+        font-size: 0.8rem;
+    }
+
+    .metric-value {
+        font-size: 1.5rem;
+    }
+
     .rewards-title {
         font-size: 1.8rem;
     }

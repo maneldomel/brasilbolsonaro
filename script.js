@@ -452,5 +452,35 @@ document.querySelectorAll('.metric-card, .donation-btn').forEach(el => {
     observer.observe(el);
 });
 
+// ============================================
+// AUTO-INCREMENT DOS VALORES (SIMULAÇÃO)
+// ============================================
+function startAutoIncrement() {
+    setInterval(() => {
+        // Incrementar participantes aleatoriamente (1 a 3 pessoas a cada 5-15 segundos)
+        const participantsElement = document.getElementById('participantsCount');
+        let currentParticipants = parseInt(participantsElement.textContent.replace(/\./g, ''));
+        const incrementParticipants = Math.floor(Math.random() * 3) + 1;
+        currentParticipants += incrementParticipants;
+        participantsElement.textContent = currentParticipants.toLocaleString('pt-BR');
+
+        // Incrementar total arrecadado proporcionalmente (20 a 100 reais por doação)
+        const totalElement = document.getElementById('totalAmount');
+        let currentTotal = parseFloat(totalElement.textContent.replace('R$ ', '').replace(/\./g, '').replace(',', '.'));
+        const incrementAmount = (Math.random() * 80 + 20) * incrementParticipants;
+        currentTotal += incrementAmount;
+        totalElement.textContent = `R$ ${currentTotal.toLocaleString('pt-BR', {minimumFractionDigits: 2})}`;
+
+        // Atualizar barra de progresso (meta de 2 milhões)
+        const meta = 2000000;
+        const percentage = Math.min((currentTotal / meta) * 100, 100);
+        document.getElementById('progressFill').style.width = `${percentage}%`;
+        document.getElementById('progressPercentage').textContent = `${Math.round(percentage)}%`;
+    }, Math.random() * 10000 + 5000); // Entre 5 e 15 segundos
+}
+
+// Iniciar auto-increment quando a página carregar
+startAutoIncrement();
+
 console.log('Site de doações carregado com sucesso!');
 console.log('LEMBRE-SE: Substitua "SUA_CHAVE_ENCRIPTADA" pela sua chave real da Duttyfy no início do arquivo script.js');
