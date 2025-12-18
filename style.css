@@ -440,6 +440,10 @@ html::-webkit-scrollbar {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
+.donation-btn:last-child {
+    grid-column: span 2;
+}
+
 .donation-btn:hover {
     background-color: #ffed4e;
     transform: translateY(-3px);
