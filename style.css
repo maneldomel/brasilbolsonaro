@@ -45,13 +45,14 @@ html::-webkit-scrollbar {
 }
 
 .header-title {
-    font-size: 3rem;
+    font-size: 4.5rem;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    line-height: 1.2;
 }
 
 .header-subtitle {
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.6;
